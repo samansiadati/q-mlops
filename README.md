@@ -34,4 +34,56 @@ Quantum ML experiments suffer from:
 ---
 
 ## 🧱 Architecture Overview
+Qiskit / Quantum Backend
+↓
+Standardized Quantum Run Schema
+↓
+Spark-based Metric Computation
+↓
+Delta Lake (optional)
+↓
+MLflow Experiment Tracking
+
+
+---
+
+## 🔧 Core Features
+
+### ✅ Standardized Quantum Experiment Schema
+- Backend metadata (simulator / QPU)
+- Circuit configuration
+- Measurement outputs
+- Noise model annotations
+
+### 📊 Pluggable Evaluation Metrics
+- Fidelity
+- KL Divergence
+- Jensen–Shannon Divergence
+- Entanglement entropy (where applicable)
+- Custom metric plugins
+
+### 🚀 Scalable Processing
+- Apache Spark DataFrames & UDFs
+- Batch and (future) streaming support
+
+### 📈 Experiment Tracking
+- MLflow integration
+- Parameter, metric, and artifact logging
+- Git commit & environment traceability
+
+---
+
+## 📦 Example Usage
+
+```python
+from qmlops.metrics import fidelity
+from qmlops.tracking import log_quantum_run
+
+f = fidelity(p, q)
+
+log_quantum_run(
+    params={"circuit_depth": 4, "shots": 1024},
+    metrics={"fidelity": f},
+    tags={"backend": "qiskit-aer"}
+)
 
