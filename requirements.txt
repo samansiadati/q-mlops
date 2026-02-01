@@ -1,0 +1,28 @@
+# Python 3.10+ recommended
+
+# Core
+numpy>=1.25
+pandas>=2.1
+mlflow>=2.7
+
+# PySpark 3.x
+pyspark==3.4.1
+
+# Delta Lake
+delta-spark==2.4.0
+
+# Qiskit for quantum experiments
+qiskit>=0.42.0
+
+# Plotting
+matplotlib>=3.8
+
+# Utilities
+pyyaml>=6.0
+tqdm>=4.66
+
+# Optional: for JSON/YAML file utilities
+orjson>=3.9
+
+# Optional: for Spark CSV / JSON support
+fastavro>=1.9
